@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "gm_westDeutschland";
+loadoutFactionBlu = "";
 loadoutFactionOpf = "";
 loadoutFactionInd = "";
 

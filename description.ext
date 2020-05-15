@@ -123,6 +123,6 @@ class CfgMusic
     class introMusic
 	{
 		name	= "introMusic";
-		sound[]	= { "data\Scorched_Earth.ogg", db + 0, 1.0 };
+		sound[]	= { "data\Scorched_Earth.ogg", db + 3, 1.0 };
 	};
 };
