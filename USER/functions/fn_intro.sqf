@@ -1,5 +1,7 @@
 params [["_color", "#FFFFFF"]];
 
+playMusic ["introMusic", 0];
+
 //Create black background
 cutText ["","BLACK FADED", 999];
 
@@ -47,9 +49,67 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
     _fullText,
     -1,
 	safezoneY +1.8,
-    30,
+    40,
     1,
     -4
 ] spawn BIS_fnc_dynamicText;
 
-[{cutText ["","BLACK IN", 0];},[],30] call CBA_fnc_waitAndExecute;
+private _filmgrain = ppEffectCreate ["FilmGrain", 2000];
+_filmgrain ppEffectEnable true;
+_filmgrain ppEffectAdjust [0.3, 0.3, 0.12, 0.12, 0.12, true];
+_filmgrain ppEffectCommit 0;
+
+private _camera = "camera" camCreate (getPos camPos_01);
+_camera camSetPos (getPos camPos_01);
+_camera camCommand "inertia on";
+_camera camSetTarget plane;
+_camera cameraEffect ["internal", "back"];
+_camera camSetFov 1;
+_camera camCommit 0;
+_camera camSetPos (getPos camPos_01);
+_camera camSetTarget plane;
+_camera camCommit 1;
+
+[{
+    cutText ["","BLACK IN", 0];
+    [{
+        params ["_camera"];
+        _camera camSetPos (getPos camPos_02);
+        _camera camCommit 10;
+
+        [ 
+            parseText "<t font='PuristaBold' size='7' color='#8b0000'>C</t><t font='PuristaBold' size='7' color='#ffffff'>O </t><t font='PuristaBold' size='7' color='#8b0000'>B</t><t font='PuristaBold' size='7' color='#ffffff'>lack </t><t font='PuristaBold' size='7' color='#8b0000'>B</t><t font='PuristaBold' size='7' color='#ffffff'>ox </t>", 
+            [ 
+                safezoneX + 0.18 * safezoneW, 
+                safezoneY + 0.35 * safezoneH, 
+                2, 
+                1 
+            ], 
+            nil, 
+            5, 
+            [4,1], 
+            0 
+        ] spawn BIS_fnc_textTiles;
+
+        [{
+            params ["_camera"];
+
+            GRAD_USER_introOver = true;
+            publicVariable "GRAD_USER_introOver";
+
+            _filmgrain ppEffectEnable false;
+            ppEffectDestroy _filmgrain;
+            _camera cameraEffect ["terminate", "back"];
+            camDestroy _camera;
+
+            10 fadeMusic 0;
+            STHud_UIMode = 1;
+            diwako_dui_main_toggled_off = false;
+
+            [{
+                playMusic "";
+                0 fadeMusic 1;
+            }, [], 11] call CBA_fnc_waitAndExecute
+        }, _this, 5] call CBA_fnc_waitAndExecute;
+    }, _this, 5] call CBA_fnc_waitAndExecute;
+},[_camera, _filmgrain],30] call CBA_fnc_waitAndExecute;
