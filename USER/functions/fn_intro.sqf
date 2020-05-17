@@ -25,22 +25,22 @@ _text pushBack (_bodyText + "Time: 09:30");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Lage:");
-_text pushBack (_bodyText + "Am 24.05.1985 um 23:46 verlor das Area Traffic Control Centre Finland den kontakt zu einer US Air Force C130J die auf dem Weg nach Nordrussland war. An Bord befanden sich Diplomaten mehrerer Nationen, auf dem Weg zu einer Nuclear Reactor Thermal Hydraulics (NURETH) Conference in Murmansk, Russland.");
+_text pushBack (_bodyText + "Am 24.05.1985 um 23:46 verlor das Area Traffic Control Centre Finland den kontakt zu einer US Air Force C130J, die auf dem Weg nach Nordrussland war. An Bord befanden sich Diplomaten mehrerer Nationen, auf dem Weg zu einer Nuclear Reactor Thermal Hydraulics (NURETH) Conference in Murmansk, Russland.");
 _text pushBack (_headerText + " ");
-_text pushBack (_bodyText + "Der Absturz Punkt wird im Grenzstreifen zwischen Finnland und Russland vermutet, dieser wird von Separatisten besetzt, die ihren eigen Staat gründen wollen.");
+_text pushBack (_bodyText + "Die Absturzstelle wird im Grenzstreifen zwischen Finnland und Russland vermutet. Dieser wird von Separatisten besetzt, welche ihren eigenen Staat gründen wollen.");
 _text pushBack (_headerText + " ");
 if (_side) then {
-    _text pushBack (_bodyText + "Sie sind als Teil einer NATO Übung in Finnland und waren die nächste verfügbar Einheit.");
+    _text pushBack (_bodyText + "Als Teil einer NATO Übung in Finnland, sind Sie die nächste verfügbar Einheit.");
 } else {
-    _text pushBack (_bodyText + "Sie sind als Teil einer UDSSR Übung in Finnland und waren die nächste verfügbar Einheit.");
+    _text pushBack (_bodyText + "Als Teil einer UDSSR Übung in Finnland, sind Sie die nächste verfügbar Einheit.");
 };
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Auftrag");
 if (_side) then {
-    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern sie die Dokumente die diese dabei hatten. Gehen Sie davon aus, dass die Russen auch ein Rettungsteam schicken werden. Kooperieren Sie mit Ihnen falls notwendig, verhindern Sie aber unter allen umständen, das die Russen die Dokumente oder Diplomaten mit nehmen.");
+    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die Russen auch ein Rettungsteam schicken werden. Kooperieren Sie mit ihnen falls möglich, verhindern Sie aber unter allen Umständen, dass die Russen die Dokumente oder Diplomaten sicherstellen.");
 } else {
-    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern sie die Dokumente die diese dabei hatten. Gehen Sie davon aus, dass die NATO auch Rettungstruppen schickt. Verhindern Sie, das es zu einem Bewaffneten konflikt mit der Nato kommt.");
+    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die NATO auch Rettungstruppen schickt. Verhindern Sie, dass es zu einem bewaffneten Konflikt mit der Nato kommt.");
 };
 
 private _fullText = _text joinString (_endStructuredText + _breakLine);
