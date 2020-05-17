@@ -21,7 +21,7 @@ if (_side) then {
     _text pushBack (_bodyText + "Faction: Poland");
 };
 _text pushBack (_bodyText + "Date: 25.05.1985");
-_text pushBack (_bodyText + "Time: 09:30");
+_text pushBack (_bodyText + "Time: 01:00");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Lage:");
@@ -74,10 +74,6 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
     [{
         cutText ["","BLACK IN", 0];
         [{
-            params ["_camera"];
-            _camera camSetPos (getPos camPos_02);
-            _camera camCommit 10;
-
             [ 
                 parseText "<t font='PuristaBold' size='7' color='#000000'>CO Black Box </t>", 
                 [ 
@@ -94,23 +90,29 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
 
             [{
                 params ["_camera"];
-
-                GRAD_USER_introOver = true;
-                publicVariable "GRAD_USER_introOver";
-
-                _filmgrain ppEffectEnable false;
-                ppEffectDestroy _filmgrain;
-                _camera cameraEffect ["terminate", "back"];
-                camDestroy _camera;
-
-                30 fadeMusic 0;
-                STHud_UIMode = 1;
-                diwako_dui_main_toggled_off = false;
+                _camera camSetPos (getPos camPos_02);
+                _camera camCommit 15;
 
                 [{
-                    playMusic "";
-                    0 fadeMusic 1;
-                }, [], 31] call CBA_fnc_waitAndExecute
+                    params ["_camera"];
+
+                    GRAD_USER_introOver = true;
+                    publicVariable "GRAD_USER_introOver";
+
+                    _filmgrain ppEffectEnable false;
+                    ppEffectDestroy _filmgrain;
+                    _camera cameraEffect ["terminate", "back"];
+                    camDestroy _camera;
+
+                    30 fadeMusic 0;
+                    STHud_UIMode = 1;
+                    diwako_dui_main_toggled_off = false;
+
+                    [{
+                        playMusic "";
+                        0 fadeMusic 1;
+                    }, [], 31] call CBA_fnc_waitAndExecute
+                }, _this, 15] call CBA_fnc_waitAndExecute;
             }, _this, 5] call CBA_fnc_waitAndExecute;
         }, _this, 5] call CBA_fnc_waitAndExecute;
     },[_camera, _filmgrain], 50] call CBA_fnc_waitAndExecute;
