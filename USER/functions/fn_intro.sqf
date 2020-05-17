@@ -25,7 +25,7 @@ _text pushBack (_bodyText + "Time: 09:30");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Lage:");
-_text pushBack (_bodyText + "Am 24.05.1985 um 23:46 verlor das Area Traffic Control Centre Finland den kontakt zu einer US Air Force C130J, die auf dem Weg nach Nordrussland war. An Bord befanden sich Diplomaten mehrerer Nationen, auf dem Weg zu einer Nuclear Reactor Thermal Hydraulics (NURETH) Conference in Murmansk, Russland.");
+_text pushBack (_bodyText + "Am 24.05.1985 um 23:46 verlor das Area Traffic Control Centre Finland den Kontakt zu einer US Air Force C130J, die auf dem Weg nach Nordrussland war. An Bord befanden sich Diplomaten mehrerer Nationen, auf dem Weg zu einer Nuclear Reactor Thermal Hydraulics (NURETH) Conference in Murmansk, Russland.");
 _text pushBack (_headerText + " ");
 _text pushBack (_bodyText + "Die Absturzstelle wird im Grenzstreifen zwischen Finnland und Russland vermutet. Dieser wird von Separatisten besetzt, welche ihren eigenen Staat gründen wollen.");
 _text pushBack (_headerText + " ");
@@ -40,7 +40,7 @@ _text pushBack (_headerText + "Auftrag");
 if (_side) then {
     _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die Russen auch ein Rettungsteam schicken werden. Kooperieren Sie mit ihnen falls möglich, verhindern Sie aber unter allen Umständen, dass die Russen die Dokumente oder Diplomaten sicherstellen.");
 } else {
-    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die NATO auch Rettungstruppen schickt. Verhindern Sie, dass es zu einem bewaffneten Konflikt mit der Nato kommt.");
+    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die NATO auch Rettungstruppen schickt. Verhindern Sie, dass es zu einem bewaffneten Konflikt mit der NATO kommt.");
 };
 
 private _fullText = _text joinString (_endStructuredText + _breakLine);
