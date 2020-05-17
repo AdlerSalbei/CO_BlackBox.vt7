@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9555.9033,67.222641,13332.945};
-		dir[]={-0.17274599,-0.56083536,-0.80981541};
-		up[]={-0.11700984,0.82790494,-0.54852521};
-		aside[]={-0.97807759,4.1146995e-007,0.20863715};
+		pos[]={9459.8057,129.66084,13401.196};
+		dir[]={0.50660419,-0.49963298,-0.70278364};
+		up[]={0.29219025,0.86621261,-0.405341};
+		aside[]={-0.81127495,5.3757685e-007,-0.58481246};
 	};
 };
 binarizationWanted=0;
@@ -6601,8 +6601,8 @@ class Mission
 		year=2035;
 		month=7;
 		day=6;
-		hour=2;
-		minute=-29;
+		hour=1;
+		minute=0;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
@@ -19403,7 +19403,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9375.0156,49.886147,13517.89};
+				position[]={9375.0156,50.886147,13517.89};
 			};
 			side="Empty";
 			class Attributes
@@ -19412,7 +19412,7 @@ class Mission
 			};
 			id=2387;
 			type="Land_HelipadEmpty_F";
-			atlOffset=6;
+			atlOffset=7;
 		};
 		class Item265
 		{
@@ -24154,7 +24154,7 @@ class Mission
 			{
 				lock="LOCKED";
 				fuel=0;
-				init="call{[{_this setFuel 1}, this, 40] call CBA_fnc_waitAndExecute;}";
+				init="call{[{fuel _this > 0},{_this setFuel 0}, this, 30, {}] call CBA_fnc_waitUntilAndExecute; " \n "[{_this setFuel 1}, this, 60] call CBA_fnc_waitAndExecute;}";
 			};
 			id=3282;
 			type="rhsgref_ins_g_ural_work_open";
