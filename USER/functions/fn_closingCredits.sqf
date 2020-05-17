@@ -31,15 +31,37 @@ _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Dankesagung");
 _text pushBack (_bodyText + "Vielen Dank an Bohemia Interactiv für das großartig Spiel.");
-_text pushBack (_bodyText + "Vielen Dank an Timeout, für die großartigen Bauten.");
-_text pushBack (_bodyText + "Vielen Dank an Diwako, für das großartige CBRN Script.");
+_text pushBack (_bodyText + "Vielen Dank an Jules, für die großartigen Deutsch Kenntnisse.");
 _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Helden des Abends");
-
+_text pushBack (_headerText + "Blufor");
 _return = [];
 
-private _groups = ["GetAllGroupsOfSide", [WEST,EAST]] call BIS_fnc_dynamicGroups;
+private _groups = ["GetAllGroupsOfSide", [WEST]] call BIS_fnc_dynamicGroups;
+
+{
+    private _group = _x;
+    _return pushBack " ";
+    _return pushBack (format ["<t color='%1' size = '1'>", _color] + (groupId _group) + _endStructuredText + _bodyText);
+    {
+            private _description = roleDescription _x;
+            if (_description == "") then {
+                _description = getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
+            };
+
+            private _split = _description splitString "@";
+            if (count _split > 1) then {
+                _description = _split select 0;
+            };
+            _return pushBack (format ["%1: %2", _description, name _x]);
+    }forEach (units _group);
+} forEach _groups;
+
+_text pushBack (_bodyText + (_return joinString _breakLine));
+_return = [];
+_text pushBack (_headerText + "Opfor");
+_groups = ["GetAllGroupsOfSide", [WEST]] call BIS_fnc_dynamicGroups;
 
 {
     private _group = _x;
