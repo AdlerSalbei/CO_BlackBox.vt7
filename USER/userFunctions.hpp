@@ -11,5 +11,6 @@ class GRAD_USER {
         class intro {};
         class outro {};
         class seatPlayers {};
+        class doLightning {};
     };
 };

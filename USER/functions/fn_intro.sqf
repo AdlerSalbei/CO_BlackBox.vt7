@@ -1,6 +1,9 @@
 params [["_color", "#FFFFFF"]];
 
+0 fadeSound 0.1;
+
 playMusic ["introMusic", 0];
+showChat false;
 
 //Create black background
 cutText ["","BLACK FADED", 999];
@@ -32,15 +35,15 @@ _text pushBack (_headerText + " ");
 if (_side) then {
     _text pushBack (_bodyText + "Als Teil einer NATO Übung in Finnland, sind Sie die nächste verfügbar Einheit.");
 } else {
-    _text pushBack (_bodyText + "Als Teil einer UDSSR Übung in Finnland, sind Sie die nächste verfügbar Einheit.");
+    _text pushBack (_bodyText + "Als Teil einer UDSSR Übung, nahe der finnischen Grenze, sind Sie die nächste verfügbar Einheit.");
 };
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Auftrag");
 if (_side) then {
-    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die Russen auch ein Rettungsteam schicken werden. Kooperieren Sie mit ihnen falls möglich, verhindern Sie aber unter allen Umständen, dass die Russen die Dokumente oder Diplomaten sicherstellen.");
+    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die Russen ebenfalls ein Rettungsteam schicken werden. Kooperieren Sie mit ihnen falls möglich, verhindern Sie aber unter allen Umständen, dass die Russen die Dokumente oder Diplomaten sicherstellen.");
 } else {
-    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die NATO auch Rettungstruppen schickt. Verhindern Sie, dass es zu einem bewaffneten Konflikt mit der NATO kommt.");
+    _text pushBack (_bodyText + "Retten Sie die Diplomaten und sichern Sie deren Unterlagen. Gehen Sie davon aus, dass die NATO ebenfalls Rettungstruppen schickt. Verhindern Sie, dass es zu einem bewaffneten Konflikt mit der NATO kommt.");
 };
 
 private _fullText = _text joinString (_endStructuredText + _breakLine);
@@ -55,10 +58,12 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
 ] spawn BIS_fnc_dynamicText;
 
 [{
+    /*
     private _filmgrain = ppEffectCreate ["FilmGrain", 2000];
     _filmgrain ppEffectEnable true;
     _filmgrain ppEffectAdjust [0.3, 0.3, 0.12, 0.12, 0.12, true];
     _filmgrain ppEffectCommit 0;
+    */
 
     private _camera = "camera" camCreate (getPos camPos_01);
     _camera camSetPos (getPos camPos_01);
@@ -73,6 +78,9 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
 
     [{
         cutText ["","BLACK IN", 0];
+
+        [{[getPos lightningPos] call GRAD_USER_fnc_doLightning;}, [], 3] call CBA_fnc_waitAndExecute;
+
         [{
             [ 
                 parseText "<t font='PuristaBold' size='7' color='#000000'>CO Black Box </t>", 
@@ -91,29 +99,48 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
             [{
                 params ["_camera"];
                 _camera camSetPos (getPos camPos_02);
-                _camera camCommit 15;
+                _camera camCommit 23;
+                [{
+                    [getPos lightningPos] call GRAD_USER_fnc_doLightning;
+                }, [], 1] call CBA_fnc_WaitAndExecute;
 
                 [{
-                    params ["_camera", "_filmgrain"];
+                    [getPos lightningPos] call GRAD_USER_fnc_doLightning;
+                }, [], 12] call CBA_fnc_WaitAndExecute;                
+
+                [{
+                    [getPos lightningPos] call GRAD_USER_fnc_doLightning;
+                }, [], 18] call CBA_fnc_WaitAndExecute;                
+
+                [{
+                    params ["_camera"/*,"_filmgrain"*/];
 
                     GRAD_USER_introOver = true;
                     publicVariable "GRAD_USER_introOver";
 
+                    /*
                     _filmgrain ppEffectEnable false;
                     ppEffectDestroy _filmgrain;
+                    */
+                    cutText ["","BLACK FADED", 0];
+                    [{
+                        cutText ["","BLACK IN", 5];
+                    }, [], 2] call CBA_fnc_waitAndExecute;
                     _camera cameraEffect ["terminate", "back"];
                     camDestroy _camera;
 
-                    30 fadeMusic 0;
+                    5 fadeSound 1;
+                    1 fadeMusic 0;
                     STHud_UIMode = 1;
                     diwako_dui_main_toggled_off = false;
+                    showChat true;
 
                     [{
                         playMusic "";
                         0 fadeMusic 1;
                     }, [], 31] call CBA_fnc_waitAndExecute
-                }, _this, 15] call CBA_fnc_waitAndExecute;
+                }, _this, 24] call CBA_fnc_waitAndExecute;
             }, _this, 5] call CBA_fnc_waitAndExecute;
         }, _this, 5] call CBA_fnc_waitAndExecute;
-    },[_camera, _filmgrain], 50] call CBA_fnc_waitAndExecute;
+    },[_camera/*, _filmgrain*/], 50] call CBA_fnc_waitAndExecute;
 },[], 5] call CBA_fnc_waitAndExecute;
