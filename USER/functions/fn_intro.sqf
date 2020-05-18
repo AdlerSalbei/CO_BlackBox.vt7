@@ -94,7 +94,7 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
                 _camera camCommit 15;
 
                 [{
-                    params ["_camera"];
+                    params ["_camera", "_filmgrain"];
 
                     GRAD_USER_introOver = true;
                     publicVariable "GRAD_USER_introOver";
