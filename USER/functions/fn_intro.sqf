@@ -24,7 +24,7 @@ if (_side) then {
     _text pushBack (_bodyText + "Faction: Poland");
 };
 _text pushBack (_bodyText + "Date: 25.05.1985");
-_text pushBack (_bodyText + "Time: 01:00");
+_text pushBack (_bodyText + "Time: 04:00");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Lage:");
@@ -102,7 +102,7 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
                 _camera camCommit 23;
                 [{
                     [getPos lightningPos] call GRAD_USER_fnc_doLightning;
-                }, [], 1] call CBA_fnc_WaitAndExecute;
+                }, [], 0.5] call CBA_fnc_WaitAndExecute;
 
                 [{
                     [getPos lightningPos] call GRAD_USER_fnc_doLightning;
@@ -115,30 +115,37 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
                 [{
                     params ["_camera"/*,"_filmgrain"*/];
 
-                    GRAD_USER_introOver = true;
-                    publicVariable "GRAD_USER_introOver";
-
                     /*
                     _filmgrain ppEffectEnable false;
                     ppEffectDestroy _filmgrain;
                     */
                     cutText ["","BLACK FADED", 0];
+
+                    if (isNil "GRAD_USER_introOver") then {
+                        GRAD_USER_introOver = true;
+                        publicVariable "GRAD_USER_introOver";
+
+                        ["GRAD_USER_introOver", [[1985, 5, 25, 4, 0], 0.5, 0, nil, [0.05,0.05,50]]] call CBA_fnc_serverEvent;
+                    };                  
+
                     [{
-                        cutText ["","BLACK IN", 5];
-                    }, [], 2] call CBA_fnc_waitAndExecute;
+                        cutText ["","BLACK IN", 10];
+                        10 fadeSound 1;
+                        [{
+                            STHud_UIMode = 1;
+                            diwako_dui_main_toggled_off = false;
+                            showChat true;
+                        }, [], 10] call CBA_fnc_waitAndExecute;
+                    }, [], 3] call CBA_fnc_waitAndExecute;
+                    
+                    1 fadeMusic 0;
                     _camera cameraEffect ["terminate", "back"];
                     camDestroy _camera;
-
-                    5 fadeSound 1;
-                    1 fadeMusic 0;
-                    STHud_UIMode = 1;
-                    diwako_dui_main_toggled_off = false;
-                    showChat true;
 
                     [{
                         playMusic "";
                         0 fadeMusic 1;
-                    }, [], 31] call CBA_fnc_waitAndExecute
+                    }, [], 10] call CBA_fnc_waitAndExecute
                 }, _this, 24] call CBA_fnc_waitAndExecute;
             }, _this, 5] call CBA_fnc_waitAndExecute;
         }, _this, 5] call CBA_fnc_waitAndExecute;

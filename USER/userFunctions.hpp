@@ -12,5 +12,6 @@ class GRAD_USER {
         class outro {};
         class seatPlayers {};
         class doLightning {};
+        class setTimeAndWeather {};
     };
 };
