@@ -138,7 +138,7 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
                         }, [], 10] call CBA_fnc_waitAndExecute;
                     }, [], 3] call CBA_fnc_waitAndExecute;
                     
-                    1 fadeMusic 0;
+                    1.2 fadeMusic 0;
                     _camera cameraEffect ["terminate", "back"];
                     camDestroy _camera;
 

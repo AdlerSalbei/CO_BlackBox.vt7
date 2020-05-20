@@ -42,7 +42,7 @@ playSound (selectRandom ["thunder_1", "thunder_2"]);
 
 				//--- Disable engine lightnings
 				0 setLightnings 0;
-			}, _this, 0.25] call CBA_fnc_waitAndExecute;
+			}, _this, 0.3] call CBA_fnc_waitAndExecute;
 		}, [_light, _lightning], 0.1] call CBA_fnc_waitAndExecute;
 	}, _this, (random 0.1)] call CBA_fnc_waitAndExecute;
 }, [_light], 0.2] call CBA_fnc_waitAndExecute;
