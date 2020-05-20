@@ -79,7 +79,7 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
     [{
         cutText ["","BLACK IN", 0];
 
-        [{[getPos lightningPos] call GRAD_USER_fnc_doLightning;}, [], 3] call CBA_fnc_waitAndExecute;
+        [{[getPos lightningPos] call GRAD_USER_fnc_doLightning;}, [], 1.5] call CBA_fnc_waitAndExecute;
 
         [{
             [ 

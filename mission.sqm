@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=4646;
+		nextID=4685;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9392.4922,109.32938,13232.84};
-		dir[]={-0.10920103,-0.31125998,0.9440369};
-		up[]={-0.035766274,0.95032483,0.30920056};
-		aside[]={0.99338126,-1.68322e-007,0.1149087};
+		pos[]={9820.4121,152.75407,11957.466};
+		dir[]={0.94946867,-0.30587193,-0.071171291};
+		up[]={0.30505413,0.9520545,-0.022866908};
+		aside[]={-0.074753776,8.1660255e-007,-0.99725378};
 	};
 };
 binarizationWanted=0;
@@ -79,13 +79,14 @@ addons[]=
 	"A3_Structures_F_EPA_Items_Vessels",
 	"A3_Structures_F_Civ_Accessories",
 	"A3_Structures_F_Items_Tools",
-	"A3_Structures_F_Heli_Civ_Market"
+	"A3_Structures_F_Heli_Civ_Market",
+	"rhs_c_a2port_car"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=35;
+		items=36;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -313,6 +314,13 @@ class AddonsMetaData
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item35
+		{
+			className="rhs_c_a2port_car";
+			name="A2 ported cars";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -24183,525 +24191,6 @@ class Mission
 		};
 		class Item359
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10066.219,46.112499,13266.948};
-				angles[]={-0,4.8046641,6.2786441};
-			};
-			side="Independent";
-			flags=6;
-			class Attributes
-			{
-				lock="LOCKED";
-				fuel=0;
-				init="call{[{fuel _this > 0},{_this setFuel 0}, this, 30, {}] call CBA_fnc_waitUntilAndExecute; " \n "[{_this setFuel 1}, this, 50] call CBA_fnc_waitAndExecute;" \n "this disableAI ""LIGHTS"";" \n "this setPilotLight true;}";
-				name="introTruck";
-			};
-			id=3282;
-			type="rhsgref_ins_g_ural_work_open";
-			atlOffset=-3.8146973e-006;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="rhs_hideLightCover";
-					expression="_this animate ['light_hide',_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="rhs_decalNumber_type";
-					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Default";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rhs_decalPlatoon_type";
-					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Army";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="rhs_decalArmy_type";
-					expression="_this setVariable ['rhs_decalArmy_type', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Army";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="rhs_decalArmy";
-					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="rhs_decalPlatoon";
-					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				nAttributes=7;
-			};
-		};
-		class Item360
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=13;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						name="introTruckD";
-					};
-					id=3284;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3285;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3286;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3287;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3288;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3290;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3292;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3294;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3296;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3298;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10066.21,44.20388,13266.998};
-						angles[]={-0,4.8046641,6.2786441};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=3300;
-					type="I_soldier_F";
-					atlOffset=-3.8146973e-006;
-				};
-				class Item11
-				{
-					dataType="Waypoint";
-					position[]={9444.3936,43.408951,13317.086};
-					combat="COMBAT";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=3314;
-					type="Move";
-				};
-				class Item12
-				{
-					dataType="Waypoint";
-					position[]={9396.9121,43.776772,13412.052};
-					formation="LINE";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=3315;
-					type="Move";
-				};
-			};
-			class Attributes
-			{
-				combatMode="BLUE";
-				behaviour="SAFE";
-				speedMode="LIMITED";
-				formation="FILE";
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=11;
-				};
-				class Links
-				{
-					items=11;
-					class Item0
-					{
-						linkID=0;
-						item0=3284;
-						item1=3282;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=3285;
-						item1=3282;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=3286;
-						item1=3282;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=3287;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=0;
-						};
-					};
-					class Item4
-					{
-						linkID=4;
-						item0=3288;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=7;
-						};
-					};
-					class Item5
-					{
-						linkID=5;
-						item0=3290;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=1;
-						};
-					};
-					class Item6
-					{
-						linkID=6;
-						item0=3292;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=2;
-						};
-					};
-					class Item7
-					{
-						linkID=7;
-						item0=3294;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=3;
-						};
-					};
-					class Item8
-					{
-						linkID=8;
-						item0=3296;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=4;
-						};
-					};
-					class Item9
-					{
-						linkID=9;
-						item0=3298;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=5;
-						};
-					};
-					class Item10
-					{
-						linkID=10;
-						item0=3300;
-						item1=3282;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=6;
-						};
-					};
-				};
-			};
-			id=3283;
-			atlOffset=-3.8146973e-006;
-		};
-		class Item361
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -24963,7 +24452,7 @@ class Mission
 				nAttributes=13;
 			};
 		};
-		class Item362
+		class Item360
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25187,7 +24676,7 @@ class Mission
 				nAttributes=11;
 			};
 		};
-		class Item363
+		class Item361
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25228,7 +24717,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item364
+		class Item362
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25244,7 +24733,7 @@ class Mission
 			id=3322;
 			type="Land_HelipadEmpty_F";
 		};
-		class Item365
+		class Item363
 		{
 			dataType="Group";
 			side="Civilian";
@@ -25352,7 +24841,7 @@ class Mission
 			};
 			id=3323;
 		};
-		class Item366
+		class Item364
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25370,7 +24859,7 @@ class Mission
 			type="gm_placeableItem_ge_headgear_headset_crew_oli";
 			atlOffset=0.085575104;
 		};
-		class Item367
+		class Item365
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25388,7 +24877,7 @@ class Mission
 			type="BloodPool_01_Large_Old_F";
 			atlOffset=-0.0099525452;
 		};
-		class Item368
+		class Item366
 		{
 			dataType="Group";
 			side="Civilian";
@@ -25518,7 +25007,7 @@ class Mission
 			};
 			id=3318;
 		};
-		class Item369
+		class Item367
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25573,7 +25062,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item370
+		class Item368
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25628,7 +25117,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item371
+		class Item369
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25683,7 +25172,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item372
+		class Item370
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25738,14 +25227,14 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item373
+		class Item371
 		{
 			dataType="Layer";
 			name="Camp #B";
 			id=3369;
 			atlOffset=22.049999;
 		};
-		class Item374
+		class Item372
 		{
 			dataType="Layer";
 			name="Camp #O";
@@ -26431,7 +25920,7 @@ class Mission
 					};
 					id=3386;
 					type="Land_Axe_F";
-					atlOffset=0.026222229;
+					atlOffset=-5.7220459e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -26499,9 +25988,9 @@ class Mission
 				};
 			};
 			id=3388;
-			atlOffset=-0.02363205;
+			atlOffset=-0.030147552;
 		};
-		class Item375
+		class Item373
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -26557,7 +26046,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item376
+		class Item374
 		{
 			dataType="Group";
 			side="Independent";
@@ -26630,7 +26119,7 @@ class Mission
 			};
 			id=3390;
 		};
-		class Item377
+		class Item375
 		{
 			dataType="Group";
 			side="Independent";
@@ -26705,7 +26194,7 @@ class Mission
 			id=3392;
 			atlOffset=-3.4332275e-005;
 		};
-		class Item378
+		class Item376
 		{
 			dataType="Group";
 			side="Independent";
@@ -26778,7 +26267,7 @@ class Mission
 			};
 			id=3394;
 		};
-		class Item379
+		class Item377
 		{
 			dataType="Group";
 			side="Independent";
@@ -26853,56 +26342,56 @@ class Mission
 			id=3396;
 			atlOffset=1.5258789e-005;
 		};
-		class Item380
+		class Item378
 		{
 			dataType="Layer";
 			name="Heavy Bunker Checkpoint #O";
 			id=3430;
 			atlOffset=22.049999;
 		};
-		class Item381
+		class Item379
 		{
 			dataType="Layer";
 			name="Tower Bunker Checkpoint #B";
 			id=3458;
 			atlOffset=22.049999;
 		};
-		class Item382
+		class Item380
 		{
 			dataType="Layer";
 			name="Vehicle Bunker Checkpoint #B";
 			id=3487;
 			atlOffset=22.049999;
 		};
-		class Item383
+		class Item381
 		{
 			dataType="Layer";
 			name="Vehicle Bunker Checkpoint #O";
 			id=3512;
 			atlOffset=22.049999;
 		};
-		class Item384
+		class Item382
 		{
 			dataType="Layer";
 			name="Bunker (Small) Checkpoint #O";
 			id=3533;
 			atlOffset=22.049999;
 		};
-		class Item385
+		class Item383
 		{
 			dataType="Layer";
 			name="Vehicle Rampart Checkpoint #O";
 			id=3550;
 			atlOffset=22.049999;
 		};
-		class Item386
+		class Item384
 		{
 			dataType="Layer";
 			name="Sandbag Checkpoint (Net) #O";
 			id=3571;
 			atlOffset=22.049999;
 		};
-		class Item387
+		class Item385
 		{
 			dataType="Layer";
 			name="Vehicle Cargo Post #O";
@@ -27523,21 +27012,21 @@ class Mission
 			id=3600;
 			atlOffset=-1.4424095;
 		};
-		class Item388
+		class Item386
 		{
 			dataType="Layer";
 			name="Vehicle Bunker #O";
 			id=3616;
 			atlOffset=22.049999;
 		};
-		class Item389
+		class Item387
 		{
 			dataType="Layer";
 			name="Vehicle Cargo Post #B";
 			id=3649;
 			atlOffset=22.049999;
 		};
-		class Item390
+		class Item388
 		{
 			dataType="Group";
 			side="Independent";
@@ -27590,7 +27079,7 @@ class Mission
 			id=3669;
 			atlOffset=-1.1444092e-005;
 		};
-		class Item391
+		class Item389
 		{
 			dataType="Object";
 			class PositionInfo
@@ -27607,119 +27096,119 @@ class Mission
 			type="rhsgref_cdf_reg_uaz_spg9";
 			atlOffset=-1.1444092e-005;
 		};
-		class Item392
+		class Item390
 		{
 			dataType="Layer";
 			name="Vehicle Net #B";
 			id=3694;
 			atlOffset=22.049999;
 		};
-		class Item393
+		class Item391
 		{
 			dataType="Layer";
 			name="Sandbags #O";
 			id=3708;
 			atlOffset=22.049999;
 		};
-		class Item394
+		class Item392
 		{
 			dataType="Layer";
 			name="Cargo Post #O9";
 			id=3737;
 			atlOffset=22.049999;
 		};
-		class Item395
+		class Item393
 		{
 			dataType="Layer";
 			name="Bunker (Small) #O1";
 			id=3751;
 			atlOffset=22.049999;
 		};
-		class Item396
+		class Item394
 		{
 			dataType="Layer";
 			name="Cargo Post #B1";
 			id=3779;
 			atlOffset=22.049999;
 		};
-		class Item397
+		class Item395
 		{
 			dataType="Layer";
 			name="Cargo Post #B2";
 			id=3811;
 			atlOffset=22.049999;
 		};
-		class Item398
+		class Item396
 		{
 			dataType="Layer";
 			name="Cargo Post #B3";
 			id=3836;
 			atlOffset=22.049999;
 		};
-		class Item399
+		class Item397
 		{
 			dataType="Layer";
 			name="Cargo Post #B4";
 			id=3863;
 			atlOffset=22.049999;
 		};
-		class Item400
+		class Item398
 		{
 			dataType="Layer";
 			name="Cargo Post #B5";
 			id=3891;
 			atlOffset=22.049999;
 		};
-		class Item401
+		class Item399
 		{
 			dataType="Layer";
 			name="Cargo Post #B6";
 			id=3915;
 			atlOffset=22.049999;
 		};
-		class Item402
+		class Item400
 		{
 			dataType="Layer";
 			name="Cargo Post #B7";
 			id=3942;
 			atlOffset=22.049999;
 		};
-		class Item403
+		class Item401
 		{
 			dataType="Layer";
 			name="Cargo Post #B8";
 			id=3965;
 			atlOffset=22.049999;
 		};
-		class Item404
+		class Item402
 		{
 			dataType="Layer";
 			name="Cargo Post #B9";
 			id=3991;
 			atlOffset=22.049999;
 		};
-		class Item405
+		class Item403
 		{
 			dataType="Layer";
 			name="Nest #B";
 			id=4003;
 			atlOffset=22.049999;
 		};
-		class Item406
+		class Item404
 		{
 			dataType="Layer";
 			name="Nest H-Barrier #B";
 			id=4014;
 			atlOffset=22.049999;
 		};
-		class Item407
+		class Item405
 		{
 			dataType="Layer";
 			name="Vehicle Cargo Post #B";
 			id=4047;
 			atlOffset=22.049999;
 		};
-		class Item408
+		class Item406
 		{
 			dataType="Layer";
 			name="Vehicle Tower #O";
@@ -28277,7 +27766,7 @@ class Mission
 			id=4077;
 			atlOffset=0.027988434;
 		};
-		class Item409
+		class Item407
 		{
 			dataType="Group";
 			side="Independent";
@@ -28330,7 +27819,7 @@ class Mission
 			id=4078;
 			atlOffset=3.8146973e-005;
 		};
-		class Item410
+		class Item408
 		{
 			dataType="Object";
 			class PositionInfo
@@ -28347,7 +27836,7 @@ class Mission
 			type="rhsgref_cdf_reg_uaz_dshkm";
 			atlOffset=3.8146973e-005;
 		};
-		class Item411
+		class Item409
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28402,7 +27891,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item412
+		class Item410
 		{
 			dataType="Group";
 			side="Independent";
@@ -28476,7 +27965,7 @@ class Mission
 			id=4083;
 			atlOffset=0.0065689087;
 		};
-		class Item413
+		class Item411
 		{
 			dataType="Group";
 			side="Independent";
@@ -28551,7 +28040,7 @@ class Mission
 			id=4084;
 			atlOffset=1.5258789e-005;
 		};
-		class Item414
+		class Item412
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28607,7 +28096,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item415
+		class Item413
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28663,7 +28152,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item416
+		class Item414
 		{
 			dataType="Group";
 			side="Independent";
@@ -28736,7 +28225,7 @@ class Mission
 			};
 			id=4090;
 		};
-		class Item417
+		class Item415
 		{
 			dataType="Group";
 			side="Independent";
@@ -28811,7 +28300,7 @@ class Mission
 			id=4092;
 			atlOffset=2.2888184e-005;
 		};
-		class Item418
+		class Item416
 		{
 			dataType="Group";
 			side="Independent";
@@ -28886,7 +28375,7 @@ class Mission
 			id=4094;
 			atlOffset=0.20098495;
 		};
-		class Item419
+		class Item417
 		{
 			dataType="Group";
 			side="Independent";
@@ -28961,7 +28450,7 @@ class Mission
 			id=4096;
 			atlOffset=0.20271683;
 		};
-		class Item420
+		class Item418
 		{
 			dataType="Group";
 			side="Independent";
@@ -29036,7 +28525,7 @@ class Mission
 			id=4098;
 			atlOffset=-3.8146973e-006;
 		};
-		class Item421
+		class Item419
 		{
 			dataType="Group";
 			side="Independent";
@@ -29111,70 +28600,70 @@ class Mission
 			id=4100;
 			atlOffset=0.0069999695;
 		};
-		class Item422
+		class Item420
 		{
 			dataType="Layer";
 			name="Vehicle Tower #O";
 			id=4131;
 			atlOffset=22.049999;
 		};
-		class Item423
+		class Item421
 		{
 			dataType="Layer";
 			name="Vehicle Watchtower #B";
 			id=4158;
 			atlOffset=22.049999;
 		};
-		class Item424
+		class Item422
 		{
 			dataType="Layer";
 			name="Vehicle Watchtower #O";
 			id=4182;
 			atlOffset=22.049999;
 		};
-		class Item425
+		class Item423
 		{
 			dataType="Layer";
 			name="Vehicle Watchtower #B";
 			id=4209;
 			atlOffset=22.049999;
 		};
-		class Item426
+		class Item424
 		{
 			dataType="Layer";
 			name="Vehicle Watchtower #O";
 			id=4233;
 			atlOffset=22.049999;
 		};
-		class Item427
+		class Item425
 		{
 			dataType="Layer";
 			name="Vehicle Bunker #O";
 			id=4249;
 			atlOffset=22.049999;
 		};
-		class Item428
+		class Item426
 		{
 			dataType="Layer";
 			name="Vehicle Tower #O";
 			id=4279;
 			atlOffset=22.049999;
 		};
-		class Item429
+		class Item427
 		{
 			dataType="Layer";
 			name="Cargo Tower #O9";
 			id=4321;
 			atlOffset=22.049999;
 		};
-		class Item430
+		class Item428
 		{
 			dataType="Layer";
 			name="Bunker Tower (Heavy) #O";
 			id=4353;
 			atlOffset=22.049999;
 		};
-		class Item431
+		class Item429
 		{
 			dataType="Layer";
 			name="Vehicle Bunker (Large) #O";
@@ -30392,7 +29881,7 @@ class Mission
 			id=4384;
 			atlOffset=-0.045434952;
 		};
-		class Item432
+		class Item430
 		{
 			dataType="Group";
 			side="Independent";
@@ -30445,7 +29934,7 @@ class Mission
 			id=4385;
 			atlOffset=-1.9073486e-006;
 		};
-		class Item433
+		class Item431
 		{
 			dataType="Object";
 			class PositionInfo
@@ -30462,7 +29951,7 @@ class Mission
 			type="rhsgref_cdf_reg_uaz_dshkm";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item434
+		class Item432
 		{
 			dataType="Group";
 			side="Independent";
@@ -30537,7 +30026,7 @@ class Mission
 			id=4388;
 			atlOffset=0.082378387;
 		};
-		class Item435
+		class Item433
 		{
 			dataType="Group";
 			side="Independent";
@@ -30612,7 +30101,7 @@ class Mission
 			id=4390;
 			atlOffset=0.010461807;
 		};
-		class Item436
+		class Item434
 		{
 			dataType="Group";
 			side="Independent";
@@ -30685,70 +30174,70 @@ class Mission
 			};
 			id=4392;
 		};
-		class Item437
+		class Item435
 		{
 			dataType="Layer";
 			name="Watchtower #O9";
 			id=4419;
 			atlOffset=22.049999;
 		};
-		class Item438
+		class Item436
 		{
 			dataType="Layer";
 			name="Vehicle Net #B";
 			id=4438;
 			atlOffset=22.049999;
 		};
-		class Item439
+		class Item437
 		{
 			dataType="Layer";
 			name="Net #B7";
 			id=4455;
 			atlOffset=22.049999;
 		};
-		class Item440
+		class Item438
 		{
 			dataType="Layer";
 			name="Cargo Post #O9";
 			id=4484;
 			atlOffset=22.049999;
 		};
-		class Item441
+		class Item439
 		{
 			dataType="Layer";
 			name="Vehicle Tower #O";
 			id=4514;
 			atlOffset=22.049999;
 		};
-		class Item442
+		class Item440
 		{
 			dataType="Layer";
 			name="Vehicle Bunker #O";
 			id=4530;
 			atlOffset=22.049999;
 		};
-		class Item443
+		class Item441
 		{
 			dataType="Layer";
 			name="Bunker (Small) #B9";
 			id=4546;
 			atlOffset=22.049999;
 		};
-		class Item444
+		class Item442
 		{
 			dataType="Layer";
 			name="Bunker (Small) #O1";
 			id=4560;
 			atlOffset=22.049999;
 		};
-		class Item445
+		class Item443
 		{
 			dataType="Layer";
 			name="Nest #B";
 			id=4572;
 			atlOffset=22.049999;
 		};
-		class Item446
+		class Item444
 		{
 			dataType="Layer";
 			name="Nest #O";
@@ -31053,7 +30542,7 @@ class Mission
 			id=4580;
 			atlOffset=0.041793823;
 		};
-		class Item447
+		class Item445
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -31109,7 +30598,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item448
+		class Item446
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -31165,7 +30654,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item449
+		class Item447
 		{
 			dataType="Group";
 			side="Independent";
@@ -31240,7 +30729,7 @@ class Mission
 			id=4587;
 			atlOffset=0.0065689087;
 		};
-		class Item450
+		class Item448
 		{
 			dataType="Group";
 			side="Independent";
@@ -31315,7 +30804,7 @@ class Mission
 			id=4589;
 			atlOffset=1.5258789e-005;
 		};
-		class Item451
+		class Item449
 		{
 			dataType="Group";
 			side="Independent";
@@ -31390,7 +30879,7 @@ class Mission
 			id=4591;
 			atlOffset=-4.5776367e-005;
 		};
-		class Item452
+		class Item450
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31408,7 +30897,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v1_F";
 			atlOffset=0.74298477;
 		};
-		class Item453
+		class Item451
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31426,7 +30915,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v2_F";
 			atlOffset=1.1292343;
 		};
-		class Item454
+		class Item452
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31444,7 +30933,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v2_F";
 			atlOffset=0.82783508;
 		};
-		class Item455
+		class Item453
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31462,7 +30951,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v2_F";
 			atlOffset=1.0114136;
 		};
-		class Item456
+		class Item454
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31480,7 +30969,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v1_F";
 			atlOffset=0.94287872;
 		};
-		class Item457
+		class Item455
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31498,7 +30987,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v1_F";
 			atlOffset=1.0269241;
 		};
-		class Item458
+		class Item456
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31515,7 +31004,7 @@ class Mission
 			type="Land_ClutterCutter_medium_F";
 			atlOffset=8.392334e-005;
 		};
-		class Item459
+		class Item457
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31532,7 +31021,7 @@ class Mission
 			type="Land_ClutterCutter_medium_F";
 			atlOffset=8.392334e-005;
 		};
-		class Item460
+		class Item458
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31550,7 +31039,7 @@ class Mission
 			type="Land_VehicleTrack_01_left_v2_F";
 			atlOffset=0.043941498;
 		};
-		class Item461
+		class Item459
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31568,7 +31057,7 @@ class Mission
 			type="Land_VehicleTrack_01_left_v2_F";
 			atlOffset=5.3405762e-005;
 		};
-		class Item462
+		class Item460
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31586,7 +31075,7 @@ class Mission
 			type="Land_VehicleTrack_01_left_v2_F";
 			atlOffset=7.6293945e-005;
 		};
-		class Item463
+		class Item461
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31604,7 +31093,7 @@ class Mission
 			type="Land_VehicleTrack_01_left_v2_F";
 			atlOffset=7.6293945e-005;
 		};
-		class Item464
+		class Item462
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31622,7 +31111,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v2_F";
 			atlOffset=8.392334e-005;
 		};
-		class Item465
+		class Item463
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31640,7 +31129,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v2_F";
 			atlOffset=0.65474319;
 		};
-		class Item466
+		class Item464
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31658,7 +31147,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v2_F";
 			atlOffset=0.57388306;
 		};
-		class Item467
+		class Item465
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31676,7 +31165,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_end_F";
 			atlOffset=8.392334e-005;
 		};
-		class Item468
+		class Item466
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31694,7 +31183,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_end_F";
 			atlOffset=8.7738037e-005;
 		};
-		class Item469
+		class Item467
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31712,7 +31201,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v1_F";
 			atlOffset=0.56800079;
 		};
-		class Item470
+		class Item468
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31730,7 +31219,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v1_F";
 			atlOffset=0.568367;
 		};
-		class Item471
+		class Item469
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31748,7 +31237,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_start_F";
 			atlOffset=-7.6293945e-006;
 		};
-		class Item472
+		class Item470
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31766,7 +31255,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_start_F";
 			atlOffset=7.6293945e-006;
 		};
-		class Item473
+		class Item471
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31783,7 +31272,7 @@ class Mission
 			type="Land_ClutterCutter_medium_F";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item474
+		class Item472
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31801,7 +31290,7 @@ class Mission
 			type="Land_VehicleTrack_01_straight_v1_F";
 			atlOffset=0.56851578;
 		};
-		class Item475
+		class Item473
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -31856,7 +31345,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item476
+		class Item474
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -31912,7 +31401,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item477
+		class Item475
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31929,7 +31418,7 @@ class Mission
 			type="Land_ClutterCutter_medium_F";
 			atlOffset=8.392334e-005;
 		};
-		class Item478
+		class Item476
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31945,6 +31434,220 @@ class Mission
 			id=4645;
 			type="Land_ClutterCutter_medium_F";
 			atlOffset=6.8664551e-005;
+		};
+		class Item477
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10220.509,45.335552,13263.046};
+				angles[]={-0,4.7060356,6.2763672};
+			};
+			side="Independent";
+			flags=6;
+			class Attributes
+			{
+				name="introTruck";
+			};
+			id=4680;
+			type="RHS_Ural_Open_Civ_03";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item478
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10220.496,43.426956,13263.096};
+						angles[]={-0,4.7060356,6.2763672};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						name="introTruckD";
+					};
+					id=4682;
+					type="I_soldier_F";
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={9446.2783,43.413239,13317.384};
+					speed="LIMITED";
+					combat="SAFE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=4683;
+					type="Move";
+					atlOffset=3.8146973e-006;
+				};
+				class Item2
+				{
+					dataType="Waypoint";
+					position[]={9377.5,43.510471,13393.107};
+					speed="LIMITED";
+					combat="SAFE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=4684;
+					type="Move";
+					atlOffset=-2.6702881e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=4682;
+						item1=4680;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=4681;
 		};
 	};
 	class Connections
