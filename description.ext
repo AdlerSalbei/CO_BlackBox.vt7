@@ -50,6 +50,7 @@ class missionSettings {
 //FUNCTIONS ====================================================================
 class CfgFunctions
 {
+    #include "functions\briefcase\cfgFunctions.hpp"
 	#include "functions\common\cfgFunctions.hpp"
 	#include "functions\diagnostics\cfgFunctions.hpp"
     #include "functions\events\cfgFunctions.hpp"
