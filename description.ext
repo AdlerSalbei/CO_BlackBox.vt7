@@ -24,6 +24,7 @@ enableDebugConsole = 1;
 #include "cfgEventHandlers.hpp"
 #include "cfgIslands.hpp"
 #include "cfgCivilians.hpp"
+#include "node_modules\grad-leaveNotes\grad_leaveNotes.hpp"
 
 class missionSettings {
 	#include "USER\missionSettings.hpp"
@@ -59,6 +60,7 @@ class CfgFunctions
 	#include "functions\waverespawn\cfgFunctions.hpp"
 
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
+    #include "node_modules\grad-leaveNotes\cfgFunctions.hpp"
 
 	#include "USER\userFunctions.hpp"
 };
@@ -100,6 +102,7 @@ class Params {
 //SOUNDS =======================================================================
 class CfgSounds {
 	#include "USER\userSounds.hpp"
+    #include "node_modules\grad-leaveNotes\cfgSounds.hpp"
 };
 
 

@@ -10,3 +10,5 @@ WEST setFriend [EAST, 1];
 		deleteVehicle _x;
 	} forEach (crew introTruck) + [introTruck];
 }] call CBA_fnc_addEventHandler;
+
+[getPos HelipadNotePositon1, getDir HelipadNotePositon1, "Ich bin eine Testnachricht", ]
