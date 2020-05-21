@@ -1,2 +1,2 @@
-#include "..\component.hpp"
+#include "..\script_macros.hpp"
 #define COMPONENT briefcase
