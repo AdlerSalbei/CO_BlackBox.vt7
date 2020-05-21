@@ -41,7 +41,7 @@ class Separatists {
     };
     class Type {
         class soldier_F {
-            uniform[] = {"gm_dk_army_uniform_soldier_84_m84", "gm_gc_civ_uniform_man_01_80_blk", "gm_dk_army_uniform_soldier_84_oli", "gm_gc_army_uniform_soldier_80_str", "gm_pl_army_uniform_soldier_autumn_80_moro"};
+            uniform[] = {"gm_dk_army_uniform_soldier_84_m84", "gm_gc_civ_uniform_man_01_80_blk", "gm_dk_army_uniform_soldier_84_oli", "gm_gc_army_uniform_soldier_80_str", "gm_pl_army_uniform_soldier_autumn_80_moro", "gm_ge_bgs_uniform_soldier_80_smp"};
             vest[] = {"gm_pl_army_vest_80_rifleman_gry", "gm_pl_army_vest_80_mg_gry", "gm_pl_army_vest_80_at_gry", "gm_ge_army_vest_80_machinegunner", "gm_dk_army_vest_54_machinegunner", "gm_dk_army_vest_m00_m84", "gm_ge_army_vest_80_rifleman"};
             backpack = "";
             headgear[] = {"gm_gc_army_headgear_m56", "gm_pl_army_headgear_wz67_oli", "gm_ge_headgear_m62", "gm_dk_headgear_m52_oli", "gm_dk_headgear_m96_cover_m84", "gm_dk_headgear_m96_oli", "gm_gc_army_headgear_m56_cover_str", "gm_ge_headgear_winterhat_80_oli"};

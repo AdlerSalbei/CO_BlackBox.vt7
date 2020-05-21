@@ -9,6 +9,7 @@ if (player getVariable ["grad_side", "west"] isEqualTo "east") then {
     [player] joinSilent createGroup EAST;
 };
 
+/*
 ["CBA_loadingScreenDone", {
     [{time > (_this + 5)},{
             if (!(didJIP) || {(didJIP && !(isNil "GRAD_USER_introOver"))}) then {
@@ -35,7 +36,7 @@ if (player getVariable ["grad_side", "west"] isEqualTo "east") then {
         };
     }, time] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
-    
+*/    
 
 [
 	"GRAD_seatPlayer", 
