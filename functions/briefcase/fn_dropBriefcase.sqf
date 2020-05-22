@@ -2,8 +2,9 @@
 
 #include "component.hpp"
 
-params ["_unit", "_briefcase"];
+params ["_unit"];
 
+private _briefcase = _unit getVariable ["grad_briefcase_briefcase", objNull];
 if (_unit != (_briefcase getVariable ["grad_briefcase_owner", objNull])) exitWith {};
 
 detach _briefcase;
