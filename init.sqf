@@ -11,3 +11,5 @@ enableSaving [false, false];
 
 // SCRIPTS =====================================================================
 [] execVM "USER\userInit.sqf";
+
+[] call grad_briefcase_fnc_addBriefcaseEHs;
