@@ -6789,7 +6789,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=5;
+														value=15;
 													};
 												};
 												class Item1
