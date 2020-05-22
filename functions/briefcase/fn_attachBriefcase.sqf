@@ -3,6 +3,7 @@
 params [["_unit", objNull], ["_vehicleMode", false], ["_briefcase", objNull]];
 
 if (isNull _unit || isNull _briefcase) exitWith {ERROR_1("Object to attach to is null.",_unit)};
+if !(isNull (_unit getVariable ["grad_briefcase_briefcase", objNull])) exitWith {};
 
 private _prevOwner = _briefcase getVariable ["grad_briefcase_owner", objNull];
 if (!isNull _prevOwner) then {
