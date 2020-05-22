@@ -79,6 +79,7 @@ class Separatists {
             primaryWeaponMagazine = "gm_30Rnd_762x39mm_B_57N231_ak47_blk";
             addItemsToVest[] = {
                 LIST_2("gm_smokeshell_wht_dm25"),
+                LIST_2("gm_handgrenade_frag_rgd5"),
                 LIST_6("gm_30Rnd_762x39mm_B_57N231_ak47_blk")
             };
         };
