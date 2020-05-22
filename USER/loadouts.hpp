@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "";
+loadoutFactionBlu = "gm_westDeutschland";
 loadoutFactionOpf = "";
 loadoutFactionInd = "Separatists";
 
