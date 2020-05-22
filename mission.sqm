@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2195;
+		nextID=2345;
 	};
 	class Camera
 	{
 		pos[]={9368.1133,56.703812,13521.201};
-		dir[]={0.015647126,-0.17663148,-0.98428351};
-		up[]={0.0028123525,0.98420084,-0.17677054};
-		aside[]={-0.99999344,-4.274043e-007,-0.015892275};
+		dir[]={0.13563918,-0.31182116,-0.94054681};
+		up[]={0.044529166,0.95004922,-0.30875754};
+		aside[]={-0.98988026,2.1315645e-007,-0.14274909};
 	};
 };
 binarizationWanted=0;
@@ -478,7 +478,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=106;
+									items=107;
 									class Item0
 									{
 										class data
@@ -1963,6 +1963,20 @@ class CustomAttributes
 											value="ace_medical_treatment_allowselfpak";
 										};
 									};
+									class Item106
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_map_bft_interval";
+										};
+									};
 								};
 							};
 						};
@@ -1979,7 +1993,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=106;
+									items=107;
 									class Item0
 									{
 										class data
@@ -2500,7 +2514,7 @@ class CustomAttributes
 																"BOOL"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -2511,7 +2525,7 @@ class CustomAttributes
 														{
 															type[]=
 															{
-																"BOOL"
+																"SCALAR"
 															};
 														};
 														value=1;
@@ -6731,6 +6745,51 @@ class CustomAttributes
 															};
 														};
 														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item106
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=5;
 													};
 												};
 												class Item1
