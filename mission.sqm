@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5213;
+		nextID=5377;
 	};
 	class Camera
 	{
-		pos[]={9373.0986,62.860039,13519.293};
-		dir[]={-0.15933755,-0.40254107,-0.90143454};
-		up[]={-0.070068687,0.91539985,-0.39640403};
-		aside[]={-0.98473895,-2.2334279e-007,0.174063};
+		pos[]={9378.2646,51.57357,13506.306};
+		dir[]={-0.24187337,-0.24514116,-0.93884861};
+		up[]={-0.061161645,0.96948415,-0.23740266};
+		aside[]={-0.96839458,-5.4104021e-008,0.24948479};
 	};
 };
 binarizationWanted=0;
@@ -48415,7 +48415,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9371.2617,45.786648,13492.249};
+				position[]={9371.2617,45.825745,13492.249};
 				angles[]={1.5073165,4.8278379,4.7553711};
 			};
 			side="Empty";
@@ -48425,7 +48425,7 @@ class Mission
 			};
 			id=7269;
 			type="Tree_Fallen_Branch2";
-			atlOffset=1.2781029;
+			atlOffset=1.3171997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48455,7 +48455,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9371.0654,46.693031,13493.155};
+				position[]={9371.0664,46.711601,13493.142};
 				angles[]={0.91091716,6.225934,0.33245134};
 			};
 			side="Empty";
@@ -48465,7 +48465,7 @@ class Mission
 			};
 			id=7270;
 			type="BloodSplatter_01_Small_New_F";
-			atlOffset=2.3592682;
+			atlOffset=2.380806;
 			class CustomAttributes
 			{
 				class Attribute0
