@@ -2,7 +2,7 @@ enableSentences false;
 enableRadio false;
 enableSaving [false, false];
 
-0 enableChannel false;  // global
+//0 enableChannel false;  // global
 1 enableChannel false;  // side
 2 enableChannel false;  // command
 3 enableChannel false;  // group

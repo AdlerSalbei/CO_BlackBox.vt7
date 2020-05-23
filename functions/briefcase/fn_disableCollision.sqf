@@ -1,6 +1,6 @@
 #include "component.hpp"
 
-params [["_briefcase",objNull]];
+params [["_briefcase", objNull]];
 
 // disable collision with all other players
 [[_briefcase],{
@@ -14,8 +14,8 @@ params [["_briefcase",objNull]];
         params ["_briefcase"];
         !isNull _briefcase &&
         playableUnits findIf {isNull _x} < 0
-    },_fnc_disable,_this,20,_fnc_disable] call CBA_fnc_waitUntilAndExecute;
-}] remoteExec ["call",0,true];
+    }, _fnc_disable, _this, 20, _fnc_disable] call CBA_fnc_waitUntilAndExecute;
+}] remoteExec ["call", 0, true];
 
 // disable collision with new JIP player
 addMissionEventHandler ["PlayerConnected",{
@@ -34,5 +34,5 @@ addMissionEventHandler ["PlayerConnected",{
             private _newUnit = _uid call BIS_fnc_getUnitByUID;
             grad_briefcase disableCollisionWith _newUnit;
         },_this] call CBA_fnc_waitUntilAndExecute;
-    }] remoteExec ["call",0,false];
+    }] remoteExec ["call", 0, false];
 }];
