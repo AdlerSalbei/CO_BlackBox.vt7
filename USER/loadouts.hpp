@@ -19,7 +19,7 @@
 
 
 loadoutFactionBlu = "gm_westDeutschland";
-loadoutFactionOpf = "";
+loadoutFactionOpf = "gm_poland";
 loadoutFactionInd = "Separatists";
 
 // Achtung: grad-factions enthält derzeit keine Loadouts, die für Zivilisten funktionieren

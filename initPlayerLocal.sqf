@@ -90,10 +90,10 @@ if !(didJIP) then {
             {
                 _allCurators pushBackUnique (getAssignedCuratorUnit _x);     
             } forEach allCurators;
-            [format["%1 fell below %2 litres of blood. Current level: %3 litres", _unit, MIN_BLOOD_VOL, GET_BLOOD_VOLUME(_unit)]] remoteExec ["systemChat", _allCurators];
+            [format["%1 fell below %2 litres of blood. Current level: %3 litres", name _unit, MIN_BLOOD_VOL, GET_BLOOD_VOLUME(_unit)]] remoteExec ["systemChat", _allCurators];
 			_unit setVariable [VAR_BLOOD_VOL, MIN_BLOOD_VOL, true];
         };
-    }, 2, _newUnit] call CBA_fnc_addPerFrameHandler;
+    }, 5, _newUnit] call CBA_fnc_addPerFrameHandler;
     missionNamespace setVariable ["grad_bleedOutHandler", _handle];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
