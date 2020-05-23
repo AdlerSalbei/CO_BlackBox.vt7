@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=7924;
+		nextID=7928;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4065;
+		nextID=5213;
 	};
 	class Camera
 	{
-		pos[]={14824.996,4.7587295,7555.1084};
-		dir[]={0.38732141,-0.50144494,0.77365184};
-		up[]={0.22448298,0.86518997,0.44839156};
-		aside[]={0.89419883,5.1222742e-009,-0.44767228};
+		pos[]={9373.0986,62.860039,13519.293};
+		dir[]={-0.15933755,-0.40254107,-0.90143454};
+		up[]={-0.070068687,0.91539985,-0.39640403};
+		aside[]={-0.98473895,-2.2334279e-007,0.174063};
 	};
 };
 binarizationWanted=0;
@@ -99,7 +99,8 @@ addons[]=
 	"A3_Characters_F_Enoch_Facewear",
 	"ace_medical_treatment",
 	"A3_Structures_F_Ind_Transmitter_Tower",
-	"A3_Structures_F_Heli_Items_Luggage"
+	"A3_Structures_F_Heli_Items_Luggage",
+	"A3_Modules_F_Effects"
 };
 class AddonsMetaData
 {
@@ -6906,7 +6907,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=767;
+		items=771;
 		class Item0
 		{
 			dataType="Layer";
@@ -20965,7 +20966,7 @@ class Mission
 					};
 					id=2547;
 					type="I_Soldier_AR_F";
-					atlOffset=2.2888184e-005;
+					atlOffset=0.0001282692;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21014,7 +21015,7 @@ class Mission
 			{
 			};
 			id=2546;
-			atlOffset=2.2888184e-005;
+			atlOffset=0.0001282692;
 		};
 		class Item301
 		{
@@ -21032,14 +21033,14 @@ class Mission
 						angles[]={0,0.21242401,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{if (local this) then {this disableAI ""PATH"";};}";
 					};
 					id=2549;
 					type="I_Soldier_AR_F";
-					atlOffset=0.771281;
+					atlOffset=6.9141388e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21088,7 +21089,7 @@ class Mission
 			{
 			};
 			id=2548;
-			atlOffset=0.771281;
+			atlOffset=6.9141388e-005;
 		};
 		class Item302
 		{
@@ -21188,7 +21189,7 @@ class Mission
 					};
 					id=7312;
 					type="I_Soldier_TL_F";
-					atlOffset=0.00015497208;
+					atlOffset=0.00023889542;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21237,7 +21238,7 @@ class Mission
 			{
 			};
 			id=2552;
-			atlOffset=0.00015497208;
+			atlOffset=0.00023889542;
 		};
 		class Item304
 		{
@@ -22472,7 +22473,7 @@ class Mission
 			};
 			id=3321;
 			type="Sign_Arrow_Blue_F";
-			atlOffset=0.86959457;
+			atlOffset=0.8693924;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29221,7 +29222,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10213.992,45.380043,13263.225};
+				position[]={10256.227,45.061745,13262.986};
 				angles[]={0,4.7060356,6.2763672};
 			};
 			side="Independent";
@@ -29363,7 +29364,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
 						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
@@ -29380,7 +29381,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29396,7 +29398,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29412,7 +29415,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29429,7 +29433,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29445,7 +29450,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29461,7 +29467,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29478,7 +29485,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -29494,7 +29502,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.979,43.471447,13263.274};
+						position[]={10256.209,43.153187,13263.036};
+						angles[]={0,4.7060356,6.2763672};
 					};
 					side="Independent";
 					flags=5;
@@ -48335,7 +48344,7 @@ class Mission
 			};
 			id=7257;
 			type="Tree_Fallen_Branch1";
-			atlOffset=0.16590118;
+			atlOffset=0.16575241;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48406,7 +48415,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9371.3301,45.786648,13492.249};
+				position[]={9371.2617,45.786648,13492.249};
 				angles[]={1.5073165,4.8278379,4.7553711};
 			};
 			side="Empty";
@@ -48416,7 +48425,7 @@ class Mission
 			};
 			id=7269;
 			type="Tree_Fallen_Branch2";
-			atlOffset=1.2802658;
+			atlOffset=1.2781029;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48446,7 +48455,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9371.0908,46.693031,13493.169};
+				position[]={9371.0654,46.693031,13493.155};
 				angles[]={0.91091716,6.225934,0.33245134};
 			};
 			side="Empty";
@@ -48456,7 +48465,7 @@ class Mission
 			};
 			id=7270;
 			type="BloodSplatter_01_Small_New_F";
-			atlOffset=2.3538208;
+			atlOffset=2.3592682;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48496,7 +48505,7 @@ class Mission
 			};
 			id=7271;
 			type="BloodSplatter_01_Small_New_F";
-			atlOffset=2.3851662;
+			atlOffset=2.3849602;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48536,7 +48545,7 @@ class Mission
 			};
 			id=7273;
 			type="BloodSplatter_01_Medium_New_F";
-			atlOffset=1.9519691;
+			atlOffset=1.9517632;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48566,8 +48575,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9368.9189,49.193214,13469.771};
-				angles[]={6.2672582,3.2528398,6.2558889};
+				position[]={9368.9189,49.193245,13469.771};
+				angles[]={6.2672505,3.2528398,6.2558885};
 			};
 			side="Empty";
 			flags=4;
@@ -48578,7 +48587,29 @@ class Mission
 			};
 			id=1504;
 			type="C130J_wreck_EP1";
-			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item705
 		{
@@ -49516,7 +49547,7 @@ class Mission
 			};
 			id=7301;
 			type="Vysilacka";
-			atlOffset=0.83393049;
+			atlOffset=0.83401442;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -54035,6 +54066,572 @@ class Mission
 			{
 			};
 			id=7919;
+		};
+		class Item767
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9365.2598,48.198586,13483.206};
+				angles[]={0.033251297,0.13313632,0.07777369};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="effectsArrow";
+			};
+			id=7924;
+			type="Sign_Arrow_Blue_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item768
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9370.7744,43.787621,13470.682};
+				angles[]={0,0,0.074943654};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=7925;
+			type="Land_ClutterCutter_medium_F";
+			atlOffset=3.8146973e-006;
+		};
+		class Item769
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9365.335,47.833599,13483.113};
+				angles[]={0.033248521,0,0.077771865};
+			};
+			init="call{this spawn { " \n " waitUntil { count (_this getVariable [ ""effectEmitter"", [] ]) > 0 }; " \n " _emitter = ( _this getVariable ""effectEmitter"" ) select 0; " \n " _emitter setPosATL getPosATL effectsArrow;" \n "_emitter attachTo [effectsArrow];" \n "detach _emitter;" \n "};}";
+			id=7926;
+			type="ModuleEffectsSmoke_F";
+			atlOffset=3.8779945;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleEffectsSmoke_F_ParticleLifeTime";
+					expression="_this setVariable ['ParticleLifeTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=50;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleEffectsSmoke_F_ParticleLifting";
+					expression="_this setVariable ['ParticleLifting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleEffectsSmoke_F_ColorAlpha";
+					expression="_this setVariable ['ColorAlpha',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleEffectsSmoke_F_ColorBlue";
+					expression="_this setVariable ['ColorBlue',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleEffectsSmoke_F_Timeout";
+					expression="_this setVariable ['Timeout',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleEffectsSmoke_F_Expansion";
+					expression="_this setVariable ['Expansion',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleEffectsSmoke_F_ColorRed";
+					expression="_this setVariable ['ColorRed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleEffectsSmoke_F_ParticleDensity";
+					expression="_this setVariable ['ParticleDensity',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleEffectsSmoke_F_ColorGreen";
+					expression="_this setVariable ['ColorGreen',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleEffectsSmoke_F_EffectSize";
+					expression="_this setVariable ['EffectSize',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleEffectsSmoke_F_ParticleSpeed";
+					expression="_this setVariable ['ParticleSpeed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ModuleEffectsSmoke_F_ParticleSize";
+					expression="_this setVariable ['ParticleSize',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ModuleEffectsSmoke_F_WindEffect";
+					expression="_this setVariable ['WindEffect',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=13;
+			};
+		};
+		class Item770
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9365.3281,47.833347,13483.119};
+				angles[]={0.033248521,0,0.077771865};
+			};
+			init="call{this spawn { " \n " waitUntil { count (_this getVariable [ ""effectEmitter"", [] ]) > 0 }; " \n " _emitter = ( _this getVariable ""effectEmitter"" ) select 0; " \n " _emitter setPosATL getPosATL effectsArrow;" \n "_emitter attachTo [effectsArrow];" \n "detach _emitter;" \n "};" \n "this spawn { " \n " waitUntil { count (_this getVariable [ ""effectLight"", [] ]) > 0 }; " \n " _emitter = ( _this getVariable ""effectLight"" ) select 0; " \n " _emitter setPosATL getPosATL effectsArrow; " \n "_emitter attachTo [effectsArrow];" \n "detach _emitter;" \n " };}";
+			id=7927;
+			type="ModuleEffectsFire_F";
+			atlOffset=3.8779945;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleEffectsFire_F_ColorBlue";
+					expression="_this setVariable ['ColorBlue',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleEffectsFire_F_ParticleDensity";
+					expression="_this setVariable ['ParticleDensity',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=25;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleEffectsFire_F_ParticleLifeTime";
+					expression="_this setVariable ['ParticleLifeTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.60000002;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleEffectsFire_F_FireDamage";
+					expression="_this setVariable ['FireDamage',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleEffectsFire_F_Timeout";
+					expression="_this setVariable ['Timeout',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleEffectsFire_F_ColorGreen";
+					expression="_this setVariable ['ColorGreen',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleEffectsFire_F_ColorRed";
+					expression="_this setVariable ['ColorRed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleEffectsFire_F_ParticleOrientation";
+					expression="_this setVariable ['ParticleOrientation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleEffectsFire_F_EffectSize";
+					expression="_this setVariable ['EffectSize',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleEffectsFire_F_ParticleSize";
+					expression="_this setVariable ['ParticleSize',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleEffectsFire_F_ParticleSpeed";
+					expression="_this setVariable ['ParticleSpeed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=11;
+			};
 		};
 	};
 	class Connections

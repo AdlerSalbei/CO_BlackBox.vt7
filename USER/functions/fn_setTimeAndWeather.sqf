@@ -14,6 +14,6 @@ setDate _date;
 0 setRain _rain;
 setWind _wind;
 0 setFog _fog;
-0 setRainbow 0;
+[0, 0] remoteExec ["setRainbow"];
 
 forceWeatherChange;

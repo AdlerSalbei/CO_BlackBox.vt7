@@ -20,8 +20,7 @@ if !(didJIP) then {
                 if (!(didJIP) || {(didJIP && !(isNil "GRAD_USER_introOver"))}) then {
                 //if (isNull (getAssignedCuratorLogic player)) then {
                     STHud_UIMode = 0;
-                    diwako_dui_main_toggled_off = true;
-                    [] call GRAD_USER_fnc_intro;
+                    diwako_dui_main_toggled_off = true;                    
 
                     private _markers = ["marker_1", "marker_2", "marker_3", "marker_4"];
                     if (side player == WEST) then {
@@ -60,7 +59,7 @@ if !(didJIP) then {
 
 #include "\z\ace\addons\medical\functions\script_component.hpp"
 //10% of the default Blood Volume as failsafe
-#define MIN_BLOOD_VOL (BLOOD_VOLUME_FATAL + 0.1 * DEFAULT_BLOOD_VOLUME)
+#define MIN_BLOOD_VOL (BLOOD_VOLUME_FATAL + 0.15 * DEFAULT_BLOOD_VOLUME)
 
 ["unit", {
     params ["_newUnit", "_oldUnit"];
@@ -86,11 +85,11 @@ if !(didJIP) then {
         if (!IS_UNCONSCIOUS(_unit) || {!IS_BLEEDING(_unit)}) exitWith {};
         //check if player falls below threshold and set threshold as new value
         if (GET_BLOOD_VOLUME(_unit) < MIN_BLOOD_VOL) then {
-            private _allCurators = [];
-            {
-                _allCurators pushBackUnique (getAssignedCuratorUnit _x);     
-            } forEach allCurators;
-            [format["%1 fell below %2 litres of blood. Current level: %3 litres", name _unit, MIN_BLOOD_VOL, GET_BLOOD_VOLUME(_unit)]] remoteExec ["systemChat", _allCurators];
+            // private _allCurators = [];
+            // {
+            //     _allCurators pushBackUnique (getAssignedCuratorUnit _x);     
+            // } forEach allCurators;
+            // [format["%1 fell below %2 litres of blood. Current level: %3 litres", name _unit, MIN_BLOOD_VOL, GET_BLOOD_VOLUME(_unit)]] remoteExec ["systemChat", _allCurators];
 			_unit setVariable [VAR_BLOOD_VOL, MIN_BLOOD_VOL, true];
         };
     }, 5, _newUnit] call CBA_fnc_addPerFrameHandler;
