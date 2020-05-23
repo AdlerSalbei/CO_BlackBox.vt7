@@ -37,7 +37,11 @@ if !(didJIP) then {
                     }forEach _markers;
 
                     [player] call GRAD_Loadout_fnc_doLoadoutForUnit;
-                //};
+                /*} else {
+                    {
+                        _x setMarkerAlphaLocal 1;
+                    }forEach allMapMarkers;
+                };*/
             };
         }, time] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addEventHandler;
@@ -92,3 +96,6 @@ if !(didJIP) then {
     }, 2, _newUnit] call CBA_fnc_addPerFrameHandler;
     missionNamespace setVariable ["grad_bleedOutHandler", _handle];
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+//Add Briefcase Interactions
+[] call grad_briefcase_fnc_addInteractionToClass; 
