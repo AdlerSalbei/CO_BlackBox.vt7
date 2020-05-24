@@ -13,5 +13,6 @@ class GRAD_USER {
         class seatPlayers {};
         class doLightning {};
         class setTimeAndWeather {};
+        class activateBFT {};
     };
 };

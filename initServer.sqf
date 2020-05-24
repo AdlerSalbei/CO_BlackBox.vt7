@@ -5,6 +5,7 @@ WEST setFriend [EAST, 1];
 
 ["GRAD_USER_introOver", {
 	_this call grad_user_fnc_setTimeAndWeather;
+	[] call grad_user_fnc_activateBFT;
 	{
 		// Current result is saved in variable _x
 		deleteVehicle _x;
