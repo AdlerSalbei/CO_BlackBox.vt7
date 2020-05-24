@@ -2,6 +2,7 @@ STHud_UIMode = 0;
 diwako_dui_main_toggled_off = true;
 
 cutText ["","BLACK OUT", 1];
+playMusic "outroMusic";
 
 [{
 	cutText ["","BLACK FADED", 999];

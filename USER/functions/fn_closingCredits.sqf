@@ -25,8 +25,8 @@ if (count _return > 1) then {
 };
 
 _text pushBack (_headerText + "Songs");
-_text pushBack (_bodyText + "Intro: Two Steps from Hell - Never Back Down");
-_text pushBack (_bodyText + "Outro: Zack Hemsey - The Way");
+_text pushBack (_bodyText + "Intro: Karri Neenberg - Scorched Earth");
+_text pushBack (_bodyText + "Outro: Hans Zimmer - End Titles");
 _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Dankesagung");

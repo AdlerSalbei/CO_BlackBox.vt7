@@ -18,7 +18,7 @@ if !(didJIP) then {
         diwako_dui_main_toggled_off = true;
         [{time > (_this + 5)},{
                 if (!(didJIP) || {(didJIP && !(isNil "GRAD_USER_introOver"))}) then {
-                //if (isNull (getAssignedCuratorLogic player)) then {
+                if (isNull (getAssignedCuratorLogic player)) then {
                     STHud_UIMode = 0;
                     diwako_dui_main_toggled_off = true;                    
 
@@ -36,11 +36,12 @@ if !(didJIP) then {
                     }forEach _markers;
 
                     [player] call GRAD_Loadout_fnc_doLoadoutForUnit;
-                /*} else {
+                } else {
                     {
                         _x setMarkerAlphaLocal 1;
                     }forEach allMapMarkers;
-                };*/
+                    cutText ["","BLACK IN", 1];
+                };
             };
         }, time] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addEventHandler;

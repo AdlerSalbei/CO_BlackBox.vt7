@@ -129,4 +129,9 @@ class CfgMusic
 		name	= "introMusic";
 		sound[]	= { "data\Scorched_Earth.ogg", db + 3, 1.0 };
 	};
+    class outroMusic
+	{
+		name	= "outroMusic";
+		sound[]	= { "data\Dunkirk_End_Titles.ogg", db + 3, 1.0 };
+	};
 };
