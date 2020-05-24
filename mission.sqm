@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6033;
+		nextID=6525;
 	};
 	class Camera
 	{
-		pos[]={2272.5339,72.02877,12778.172};
-		dir[]={-0.39343926,-0.4900915,0.77782911};
-		up[]={-0.22120871,0.87167138,0.4373295};
-		aside[]={0.89234239,-3.9581209e-009,0.45136163};
+		pos[]={16804.629,45.613815,15167.438};
+		dir[]={-0.82098234,-0.5572899,-0.12418318};
+		up[]={-0.55102354,0.8303172,-0.083349183};
+		aside[]={-0.14956082,-6.0012098e-008,0.98875588};
 	};
 };
 binarizationWanted=0;
@@ -2538,7 +2538,7 @@ class CustomAttributes
 																"BOOL"
 															};
 														};
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -11563,6 +11563,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=1685;
 			atlOffset=-3.8146973e-006;
@@ -11880,6 +11881,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=1691;
 		};
@@ -12196,6 +12198,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=1696;
 		};
@@ -50198,6 +50201,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7316;
 			atlOffset=0.00036430359;
@@ -52480,6 +52484,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7884;
 			atlOffset=-1.2397766e-005;
@@ -52804,6 +52809,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7887;
 			atlOffset=0.43302965;
@@ -53127,6 +53133,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7893;
 			atlOffset=0.52023649;
@@ -53426,6 +53433,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7899;
 			atlOffset=4.7683716e-007;
@@ -53703,6 +53711,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7914;
 			atlOffset=0.020000458;
@@ -53983,6 +53992,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setVariable [""ACE_map_hideBlueForceMarker"",true];}";
 			};
 			id=7919;
 		};
