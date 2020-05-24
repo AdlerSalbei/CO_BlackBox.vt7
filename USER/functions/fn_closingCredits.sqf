@@ -90,7 +90,7 @@ private _fullText = _text joinString (_endStructuredText + _breakLine);
     _fullText,
     -1,
 	safezoneY +1.8,
-    20,
+    30,
     1,
-    -5
+    -4
 ] spawn BIS_fnc_dynamicText;
