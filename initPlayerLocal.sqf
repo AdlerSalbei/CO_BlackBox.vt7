@@ -8,7 +8,7 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 if (player getVariable ["grad_side", "west"] isEqualTo "east") then {
     private _grp = createGroup EAST;
     [player] joinSilent _grp;
-    _grp setVariable ["ACE_map_hideBlueForceMarker,true"];
+    _grp setVariable ["ACE_map_hideBlueForceMarker",true];
 };
 
 
