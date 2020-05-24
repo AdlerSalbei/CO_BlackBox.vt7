@@ -97,4 +97,7 @@ if !(didJIP) then {
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 //Add Briefcase Interactions
-[] call grad_briefcase_fnc_addInteractionToClass; 
+[] call grad_briefcase_fnc_addInteractionToClass;
+
+
+[{0 setRainbow 0;}, [], 10] call CBA_fnc_waitAndExecute;
