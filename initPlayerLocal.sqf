@@ -42,7 +42,11 @@ if !(didJIP) then {
                     {
                         _x setMarkerAlphaLocal 1;
                     }forEach allMapMarkers;
+
                     cutText ["","BLACK IN", 1];
+                    0 fadeSound 1;
+                    showChat true;
+                    diwako_dui_main_toggled_off = false;
                 };
             };
         }, time] call CBA_fnc_waitUntilAndExecute;

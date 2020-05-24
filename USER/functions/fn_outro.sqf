@@ -21,13 +21,13 @@ playMusic "outroMusic";
 			}, [_chairs], 1] call CBA_fnc_waitAndExecute;
 		};
 		[{
-			cutText ["","BLACK IN", 1];
+			cutText ["","BLACK IN", 5];
 			10 fadeMusic 0.05;
 
 			[{
 				5 fadeMusic 0;
 			}, [], 10] call CBA_fnc_waitAndExecute;
-		}, [], 20] call CBA_fnc_waitAndExecute;
+		}, [], 60] call CBA_fnc_waitAndExecute;
 	}, [], 1] call CBA_fnc_waitAndExecute;
 }, [], 1] call CBA_fnc_waitAndExecute;
 

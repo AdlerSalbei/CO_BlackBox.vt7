@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=7934;
+		nextID=7936;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6525;
+		nextID=6689;
 	};
 	class Camera
 	{
-		pos[]={16804.629,45.613815,15167.438};
-		dir[]={-0.82098234,-0.5572899,-0.12418318};
-		up[]={-0.55102354,0.8303172,-0.083349183};
-		aside[]={-0.14956082,-6.0012098e-008,0.98875588};
+		pos[]={15521.122,55.662872,16802.357};
+		dir[]={-0.31027976,-0.88974524,0.33478338};
+		up[]={-0.60480732,0.4564575,0.65257549};
+		aside[]={0.73344034,-1.5348196e-006,0.67975396};
 	};
 };
 binarizationWanted=0;
@@ -6907,7 +6907,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=770;
+		items=771;
 		class Item0
 		{
 			dataType="Layer";
@@ -54694,6 +54694,24 @@ class Mission
 			};
 			id=7932;
 			atlOffset=3.8749962;
+		};
+		class Item770
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15489.076,8.7819109,16833.135};
+				angles[]={6.2695355,0,6.1631737};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="firePlace";
+			};
+			id=7935;
+			type="Land_Fire_barrel";
+			atlOffset=-0.012396812;
 		};
 	};
 	class Connections
