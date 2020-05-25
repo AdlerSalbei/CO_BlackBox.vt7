@@ -41,10 +41,11 @@ _return = [];
 private _groups = ["GetAllGroupsOfSide", [WEST]] call BIS_fnc_dynamicGroups;
 
 {
-    private _group = _x;
-    _return pushBack " ";
-    _return pushBack (format ["<t color='%1' size = '1'>", _color] + (groupId _group) + _endStructuredText + _bodyText);
-    {
+    if (side _x isEqualTo WEST) then {
+        private _group = _x;
+        _return pushBack " ";
+        _return pushBack (format ["<t color='%1' size = '1'>", _color] + (groupId _group) + _endStructuredText + _bodyText);
+        {
             private _description = roleDescription _x;
             if (_description == "") then {
                 _description = getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
@@ -55,7 +56,8 @@ private _groups = ["GetAllGroupsOfSide", [WEST]] call BIS_fnc_dynamicGroups;
                 _description = _split select 0;
             };
             _return pushBack (format ["%1: %2", _description, name _x]);
-    }forEach (units _group);
+        }forEach (units _group);
+    };
 } forEach _groups;
 
 _text pushBack (_bodyText + (_return joinString _breakLine));
@@ -65,10 +67,11 @@ _text pushBack (_headerText + "Opfor");
 _groups = ["GetAllGroupsOfSide", [EAST]] call BIS_fnc_dynamicGroups;
 
 {
-    private _group = _x;
-    _return pushBack " ";
-    _return pushBack (format ["<t color='%1' size = '1'>", _color] + (groupId _group) + _endStructuredText + _bodyText);
-    {
+    if (side _x isEqualTo EAST) then {
+        private _group = _x;
+        _return pushBack " ";
+        _return pushBack (format ["<t color='%1' size = '1'>", _color] + (groupId _group) + _endStructuredText + _bodyText);
+        {
             private _description = roleDescription _x;
             if (_description == "") then {
                 _description = getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
@@ -79,7 +82,8 @@ _groups = ["GetAllGroupsOfSide", [EAST]] call BIS_fnc_dynamicGroups;
                 _description = _split select 0;
             };
             _return pushBack (format ["%1: %2", _description, name _x]);
-    }forEach (units _group);
+        }forEach (units _group);
+    };
 } forEach _groups;
 
 _text pushBack (_bodyText + (_return joinString _breakLine));
