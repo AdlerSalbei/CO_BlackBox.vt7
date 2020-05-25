@@ -62,7 +62,7 @@ _text pushBack (_bodyText + (_return joinString _breakLine));
 _return = [];
 _groups = [];
 _text pushBack (_headerText + "Opfor");
-_groups = ["GetAllGroupsOfSide", [WEST]] call BIS_fnc_dynamicGroups;
+_groups = ["GetAllGroupsOfSide", [EAST]] call BIS_fnc_dynamicGroups;
 
 {
     private _group = _x;
