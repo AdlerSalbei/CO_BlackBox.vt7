@@ -28,10 +28,11 @@ player allowDamage false;
 			};
 			[{
 				cutText ["","BLACK IN", 5];
-				10 fadeMusic 0.05;
+				10 fadeMusic 0;
 
 				[{
-					5 fadeMusic 0;
+					playMusic "";
+					0 fadeMusic 1;
 				}, [], 10] call CBA_fnc_waitAndExecute;
 			}, [], 60] call CBA_fnc_waitAndExecute;
 		}, [], 1] call CBA_fnc_waitAndExecute;

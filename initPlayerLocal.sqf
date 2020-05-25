@@ -8,6 +8,11 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 if (player getVariable ["grad_side", "west"] isEqualTo "east") then {
     private _grp = createGroup EAST;
     [player] joinSilent _grp;
+
+   private _leader = leader _grp;
+   private _data = [nil, groupId _grp, false];
+
+   ["RegisterGroup", [_grp, _leader, _data]] call BIS_fnc_dynamicGroups;
     _grp setVariable ["ACE_map_hideBlueForceMarker",true];
 };
 
