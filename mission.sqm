@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7017;
+		nextID=7181;
 	};
 	class Camera
 	{
-		pos[]={16819.793,37.017899,15175.154};
-		dir[]={-0.92101812,-0.28863055,0.26159215};
-		up[]={-0.27765286,0.95743895,0.07886029};
-		aside[]={0.27321985,8.9406967e-008,0.96195847};
+		pos[]={9358.8818,59.742458,13503.501};
+		dir[]={0.085700035,-0.49050921,-0.86721772};
+		up[]={0.048238222,0.87143356,-0.48813424};
+		aside[]={-0.9951551,1.777953e-007,-0.098343976};
 	};
 };
 binarizationWanted=0;
@@ -19690,21 +19690,19 @@ class Mission
 						angles[]={0,6.2086687,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{if (local this) then {this disableAI ""PATH"";};}";
 					};
 					id=2453;
 					type="I_soldier_F";
-					atlOffset=0.60311985;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=2454;
-			atlOffset=0.60311985;
 		};
 		class Item281
 		{
@@ -20193,14 +20191,13 @@ class Mission
 						angles[]={0,0.3945539,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						stance="Middle";
 					};
 					id=2522;
 					type="I_Soldier_LAT_F";
-					atlOffset=0.58644295;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20249,7 +20246,6 @@ class Mission
 			{
 			};
 			id=2521;
-			atlOffset=0.58644295;
 		};
 		class Item290
 		{
@@ -20466,14 +20462,14 @@ class Mission
 						position[]={15063.622,8.264782,8052.1387};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{if (local this) then {this disableAI ""PATH"";};}";
 					};
 					id=2533;
 					type="I_soldier_F";
-					atlOffset=0.77600002;
+					atlOffset=0.00010108948;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20522,7 +20518,7 @@ class Mission
 			{
 			};
 			id=2532;
-			atlOffset=0.77600002;
+			atlOffset=0.00010108948;
 		};
 		class Item294
 		{
@@ -20687,14 +20683,14 @@ class Mission
 						angles[]={0,0.34859461,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{if (local this) then {this disableAI ""PATH"";};}";
 					};
 					id=2539;
 					type="I_soldier_F";
-					atlOffset=2.0100002;
+					atlOffset=0.00037479401;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20743,7 +20739,7 @@ class Mission
 			{
 			};
 			id=2538;
-			atlOffset=2.0100002;
+			atlOffset=0.00037479401;
 		};
 		class Item297
 		{
@@ -20983,14 +20979,14 @@ class Mission
 						angles[]={0,0.21242401,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{if (local this) then {this disableAI ""PATH"";};}";
 					};
 					id=2547;
 					type="I_Soldier_AR_F";
-					atlOffset=0.83699989;
+					atlOffset=5.9127808e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21039,7 +21035,7 @@ class Mission
 			{
 			};
 			id=2546;
-			atlOffset=0.83699989;
+			atlOffset=5.9127808e-005;
 		};
 		class Item301
 		{
@@ -21057,14 +21053,13 @@ class Mission
 						angles[]={0,0.21242401,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{if (local this) then {this disableAI ""PATH"";};}";
 					};
 					id=2549;
 					type="I_Soldier_AR_F";
-					atlOffset=0.771281;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21113,7 +21108,6 @@ class Mission
 			{
 			};
 			id=2548;
-			atlOffset=0.771281;
 		};
 		class Item302
 		{
@@ -54724,7 +54718,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15529.716,9.1641397,16505.377};
+				position[]={15529.716,9.1643524,16505.377};
 			};
 			side="Empty";
 			flags=4;
@@ -54734,7 +54728,30 @@ class Mission
 			};
 			id=7935;
 			type="Land_Fire_barrel";
-			atlOffset=-0.0042123795;
+			atlOffset=-0.0039997101;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
