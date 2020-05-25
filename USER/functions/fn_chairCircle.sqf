@@ -10,7 +10,7 @@ private _chairWidth = (abs (_chairBox # 0 # 0) + abs (_chairBox # 1 # 0)) + 0.5;
 private _circleRadius = (_count * _chairWidth) / (2 * pi);
 
 for "_i" from 1 to _count do {
-	private _newPos = _pos getPos [(_circleRadius max 2), _direction];
+	private _newPos = _pos getPos [(_circleRadius max 4), _direction];
 	_positions pushBack _newPos;
 	_direction = _direction + _angle;
 };
