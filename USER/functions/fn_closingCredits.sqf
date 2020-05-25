@@ -30,7 +30,7 @@ _text pushBack (_bodyText + "Outro: Hans Zimmer - End Titles");
 _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Dankesagung");
-_text pushBack (_bodyText + "Vielen Dank an Bohemia Interactiv für das großartige Spiel.");
+_text pushBack (_bodyText + "Vielen Dank an Bohemia Interactiv, für das großartige Spiel.");
 _text pushBack (_bodyText + "Vielen Dank an Jules, für die großartigen Deutsch Kenntnisse.");
 _text pushBack (_headerText + " ");
 
@@ -63,6 +63,8 @@ private _groups = ["GetAllGroupsOfSide", [WEST]] call BIS_fnc_dynamicGroups;
 _text pushBack (_bodyText + (_return joinString _breakLine));
 _return = [];
 _groups = [];
+_text pushBack (_headerText + " ");
+_text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Opfor");
 _groups = ["GetAllGroupsOfSide", [EAST]] call BIS_fnc_dynamicGroups;
 
