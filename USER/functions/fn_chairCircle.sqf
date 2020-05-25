@@ -1,11 +1,16 @@
-params ["_pos", "_distance", ["_type", "Land_CampingChair_V2_F"], ["_count", count (playableUnits + switchableUnits)], ["_fire", nil]];
+params ["_pos", ["_type", "Land_CampingChair_V2_F"], ["_count", count (playableUnits + switchableUnits)], ["_fire", nil]];
 
 private _positions = [];
 private _angle = 360/_count;
 private _direction = 0;
+private _temp = _type createVehicle [0,0,100];
+private _chairBox = boundingBox _temp;
+deleteVehicle _temp;
+private _chairWidth = (abs (_chairBox # 0 # 0) + abs (_chairBox # 1 # 0)) + 0.5;
+private _circleRadius = (_count * _chairWidth) / (2 * pi);
 
 for "_i" from 1 to _count do {
-	private _newPos = _pos getPos [_distance, _direction];
+	private _newPos = _pos getPos [_circleRadius, _direction];
 	_positions pushBack _newPos;
 	_direction = _direction + _angle;
 };

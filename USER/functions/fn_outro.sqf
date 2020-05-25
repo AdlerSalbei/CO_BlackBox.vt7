@@ -13,7 +13,7 @@ playMusic "outroMusic";
 
 		if (isServer) then {
 
-			private _chairs = [getPos firePlace, 5, "Land_CampingChair_V2_F", (count (playableUnits + switchableUnits)) + 3] call GRAD_USER_fnc_chairCircle;
+			private _chairs = [getPos firePlace, "Land_CampingChair_V2_F", (count (playableUnits + switchableUnits)) + 3] call GRAD_USER_fnc_chairCircle;
 			[{
 				params ["_chairs"];
 
